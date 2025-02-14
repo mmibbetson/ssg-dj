@@ -31,7 +31,7 @@ features = ["derive", "wrap_help"]
 
 [workspace.package]
 edition = "2021"
-version = "0.1.1"
+version = "0.1.0"
 
 [lib]
 name = "ssg_dj_lib"
@@ -43,7 +43,8 @@ anyhow = "1.0.92"                                      # MIT or Apache-2.0
 serde = { version = "1.0.214", features = ["derive"] } # MIT or Apache-2.0
 toml = "0.8.19"                                        # MIT or Apache-2.0
 clap.workspace = true                                  # MIT or Apache-2.0
-jotdown = "0.7.0"
+jotdown = "0.7.0"                                      # MIT or Apache-2.0
+syntect = "5.2.0"                                      # MIT or Apache-2.0
 
 [profile.release]
 opt-level = 3

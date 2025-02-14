@@ -13,12 +13,12 @@
 }:
 
 rustPlatform.buildRustPackage rec {
-  pname = "dn";
-  version = "0.1.3";
+  pname = "ssg-dj";
+  version = "0.1.0";
 
   src = fetchFromGitHub {
     owner = "mmibbetson";
-    repo = "dn";
+    repo = "ssg-dj";
     rev = "v${version}";
     sha256 = "sha256-D7ccY8Vq8grUwjojPzVlpBPmyU1iUwt41gYAs4rOzaI=";
   };
@@ -38,19 +38,19 @@ rustPlatform.buildRustPackage rec {
 
   postInstall =
     ''
-      installManPage man/dn.1 man/dn-new.1 man/dn-rename.1
+      installManPage man/ssg-dj.1 man/ssg-dj-new.1 man/ssg-dj-rename.1
       installShellCompletion \
-        --bash completions/dn.bash \
-        --fish completions/dn.fish \
-        --zsh completions/_dn
+        --bash completions/ssg-dj.bash \
+        --fish completions/ssg-dj.fish \
+        --zsh completions/_ssg-dj
     '';
 
   meta = with lib; {
     description = "A simple, minimal, and flexible command line utility for organising plaintext files.";
-    homepage = "https://mmibbetson.github.io/software/dn";
-    changelog = "https://github.com/mmibbetson/dn/CHANGELOG.md";
+    homepage = "https://mmibbetson.github.io/software/ssg-dj";
+    changelog = "https://github.com/mmibbetson/ssg-dj/CHANGELOG.md";
     license = licenses.gpl3Plus;
-    mainProgram = "dn";
+    mainProgram = "ssg-dj";
     maintainers = with maintainers; [
       mmibbetson
     ];
